@@ -9,26 +9,37 @@
 
     <header>This should be the common Jamstack.org header</header>
 
-    <h1>{{meetup.meetup}}</h1>
+    <h1>This is where we show all the meetup commuinities</h1>
 
-    {% for event in events.events %}
+
+
+    {% for meetup in meetups %}
 
       <div>
-        <h2>{{ event.title }}</h2>
-        <p>{{ event.description }}</p>
-
-        {% for talk in event.talks %}
-
-          <div class="talk">
-            <img src="{{ talk.speaker.avatar}}" alt="{{ talk.speaker.name }}"/>
-            <h3>{{ talk.title }}
-              by
-              {{ talk.speaker.name }}</h3>
-            <p>{{ talk.description }}</p>
-          </div>
-        {% endfor %}
+        <h2>{{ meetup.meetup }}</h2>
+        <p>{{ meetup.slug }}</p>
       </div>
 
+
+      {% for event in meetup.events %}
+
+        <div>
+          <h2>{{ event.title }}</h2>
+          <p>{{ event.description }}</p>
+
+          {% for talk in event.talks %}
+
+            <div class="talk">
+              <img src="{{ talk.speaker.avatar}}" alt="{{ talk.speaker.name }}"/>
+              <h3>{{ talk.title }}
+                by
+                {{ talk.speaker.name }}</h3>
+              <p>{{ talk.description }}</p>
+            </div>
+          {% endfor %}
+        </div>
+
+      {% endfor %}
     {% endfor %}
 
     <footer>

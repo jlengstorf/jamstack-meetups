@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ meetup.meetup }}</title>
+  </head>
+  <body>
+
+    <header>This should be the common Jamstack.org header</header>
+
+    <h1>{{meetup.meetup}}</h1>
+
+    {% for event in meetup.events %}
+
+      <div>
+        <h2>{{ event.title }}</h2>
+        <p>{{ event.description }}</p>
+
+        {% for talk in event.talks %}
+
+          <div class="talk">
+            <img src="{{ talk.speaker.avatar}}" alt="{{ talk.speaker.name }}"/>
+            <h3>{{ talk.title }}
+              by
+              {{ talk.speaker.name }}</h3>
+            <p>{{ talk.description }}</p>
+          </div>
+        {% endfor %}
+      </div>
+
+    {% endfor %}
+
+    <footer>
+      This should be the common jamstack.org footer
+    </footer>
+  </body>
+</html>

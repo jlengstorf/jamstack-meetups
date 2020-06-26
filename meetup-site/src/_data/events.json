@@ -1,0 +1,47 @@
+{
+  "meetup": "SF",
+  "source_url": "https://something.netlify.app",
+  "slug": "san-francisco",
+  "events": [
+    {
+      "id": 1,
+      "title": "Jamstack SF July",
+      "description": "Come to our meetup.",
+      "description_html": "<p>Come to our meetup.</p>",
+      "date_start": "2020-07-03T18:30:00Z",
+      "date_end": "2020-07-03T21:00:00Z",
+      "link": "https://example.org/meetup-link",
+      "talks": [
+        {
+          "speaker": {
+            "name": "Phil",
+            "avatar": "https://github.com/philhawksworth.png",
+            "website": "https://hawksworx.com"
+          },
+          "title": "It Should Have Been Called The Jamslack",
+          "description": "TKTK"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Jamstack SF August",
+      "description": "Come to our meetup.",
+      "description_html": "<p>Come to our meetup.</p>",
+      "date_start": "2020-08-03T18:30:00Z",
+      "date_end": "2020-08-03T21:00:00Z",
+      "link": "https://example.org/meetup-link",
+      "talks": [
+        {
+          "speaker": {
+            "name": "Phil",
+            "avatar": "https://github.com/philhawksworth.png",
+            "website": "https://hawksworx.com"
+          },
+          "title": "It Should Have Been Called The Jamslack",
+          "description": "TKTK"
+        }
+      ]
+    }
+  ]
+}
